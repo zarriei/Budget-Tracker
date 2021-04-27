@@ -25,4 +25,8 @@ app.use(require("./Develop/routes/api"));
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
+
+  app.get('/', function(req, res){
+    res.sendFile(__dirname+'/bin/public/index.html'); // change the path to your index.html
+});
 });
